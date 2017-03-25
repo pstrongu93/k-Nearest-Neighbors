@@ -1,7 +1,7 @@
-from KNearestNeighbors import *
+from lib.KNearestNeighbors import *
 
 test = KNearestNeighbors()
-test.load_data_from_csv("./iris_data.txt")
+test.load_data_from_csv("./data/iris_data.txt")
 
 for i in range(len(test.list_of_points)):
     point = test.list_of_points[i]

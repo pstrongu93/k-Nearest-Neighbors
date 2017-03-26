@@ -52,7 +52,7 @@ class KNearestNeighbors:
         # TODO
         pass
 
-    def calculate_accuracy(self):  # Prediction classes will be taken from 'pointInstance.get_point_class'
+    def calculate_accuracy(self):  # Prediction classes will be taken from 'pointInstance.get_point_class()'
         # TODO
         pass
 

@@ -1,5 +1,6 @@
 import csv
 import math
+import operator
 
 
 class KNearestNeighbors:
@@ -35,13 +36,24 @@ class KNearestNeighbors:
             distance += pow((point_1.get_point_value(i) - point_2.get_point_value(i)), 2)
         return math.sqrt(distance)
 
-    def get_k_nearest_neighbors(self):
+    def get_k_nearest_neighbors(self, number_of_tested_point):
+        training_points_and_distances = []
+        tested_point = self.list_of_test_points[int(number_of_tested_point)]
+        for training_point in self.list_of_training_points:
+            distance = self.calculate_euclidean_distance(tested_point, training_point)  # calculate every distance
+            training_points_and_distances.append((training_point, distance))
+        training_points_and_distances.sort(key=operator.itemgetter(1))  # Sorting by the lowest distance
+        k_nearest_neighbors = []
+        for i in range(self.k):
+            k_nearest_neighbors.append(training_points_and_distances[i][0])  # extract points with the lowest distance
+        return k_nearest_neighbors
+
+    def get_response(self, k_nearest_neighbors):
+        # TODO
         pass
 
-    def get_response(self):
-        pass
-
-    def calculate_accuracy(self):
+    def calculate_accuracy(self):  # Prediction classes will be taken from 'pointInstance.get_point_class'
+        # TODO
         pass
 
 
@@ -49,6 +61,9 @@ class Point:
     def __init__(self, list_of_values, point_class):
         self.list_of_values = list_of_values
         self.point_class = point_class
+
+    def __str__(self):
+        return "Values: " + str(self.get_point_values()) + ", Class: " + str(self.get_point_class())
 
     def get_point_value(self, number_of_value):
         if number_of_value > len(self.list_of_values):

@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>KNearestNeighbors module &mdash; K nearest neighbours 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="K nearest neighbours 1.0 documentation" href="index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-KNearestNeighbors">
+<span id="knearestneighbors-module"></span><h1>KNearestNeighbors module<a class="headerlink" href="#module-KNearestNeighbors" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="KNearestNeighbors.KNearestNeighbors">
+<em class="property">class </em><code class="descclassname">KNearestNeighbors.</code><code class="descname">KNearestNeighbors</code><span class="sig-paren">(</span><em>path_to_training_data='../data/training.txt'</em>, <em>path_to_test_data='../data/test.txt'</em>, <em>k_value=3</em><span class="sig-paren">)</span><a class="headerlink" href="#KNearestNeighbors.KNearestNeighbors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Main class for points classification</p>
+<dl class="staticmethod">
+<dt id="KNearestNeighbors.KNearestNeighbors.calculate_accuracy">
+<em class="property">static </em><code class="descname">calculate_accuracy</code><span class="sig-paren">(</span><em>y_true</em>, <em>y_predicted</em><span class="sig-paren">)</span><a class="headerlink" href="#KNearestNeighbors.KNearestNeighbors.calculate_accuracy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for calculate accuracy of classification
+:param list y_true: list of true classes of points
+:param list y_predicted: list of predicted classed of points
+:return: str prediction
+:rtype: float</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="KNearestNeighbors.KNearestNeighbors.calculate_euclidean_distance">
+<em class="property">static </em><code class="descname">calculate_euclidean_distance</code><span class="sig-paren">(</span><em>point_1</em>, <em>point_2</em><span class="sig-paren">)</span><a class="headerlink" href="#KNearestNeighbors.KNearestNeighbors.calculate_euclidean_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for calculate eucliedan distance
+:param KNearestNeighbors self: class instance
+:param  Point point_1: first point object
+:param  Point point_2: second point object
+:return: distance
+:rtype: float</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="KNearestNeighbors.KNearestNeighbors.get_k_nearest_neighbors">
+<code class="descname">get_k_nearest_neighbors</code><span class="sig-paren">(</span><em>number_of_tested_point</em><span class="sig-paren">)</span><a class="headerlink" href="#KNearestNeighbors.KNearestNeighbors.get_k_nearest_neighbors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method which is finding K nearest points for current point 
+:param KNearestNeighbors self: class instance
+:param  int number_of_tested_point: inex of point
+:return: k_nearest_neighbors 
+:rtype: list</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="KNearestNeighbors.KNearestNeighbors.get_prediction">
+<em class="property">static </em><code class="descname">get_prediction</code><span class="sig-paren">(</span><em>k_nearest_neighbors</em><span class="sig-paren">)</span><a class="headerlink" href="#KNearestNeighbors.KNearestNeighbors.get_prediction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for point classification
+:param list k_nearest_neighbors: K nearest points
+:return: str prediction
+:rtype: list</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="KNearestNeighbors.KNearestNeighbors.load_data_from_csv">
+<code class="descname">load_data_from_csv</code><span class="sig-paren">(</span><em>path</em>, <em>training</em><span class="sig-paren">)</span><a class="headerlink" href="#KNearestNeighbors.KNearestNeighbors.load_data_from_csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for load tada from csv files
+:param KNearestNeighbors self: class instance 
+:param string path: path to file
+:param bool training: traning is enabled or not</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="KNearestNeighbors.Point">
+<em class="property">class </em><code class="descclassname">KNearestNeighbors.</code><code class="descname">Point</code><span class="sig-paren">(</span><em>list_of_values</em>, <em>point_class</em><span class="sig-paren">)</span><a class="headerlink" href="#KNearestNeighbors.Point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Point object model</p>
+<dl class="method">
+<dt id="KNearestNeighbors.Point.get_point_class">
+<code class="descname">get_point_class</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#KNearestNeighbors.Point.get_point_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>getter
+:param Point self:  class instance
+:return: point_class: class of point
+:rtype string:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="KNearestNeighbors.Point.get_point_value">
+<code class="descname">get_point_value</code><span class="sig-paren">(</span><em>number_of_value</em><span class="sig-paren">)</span><a class="headerlink" href="#KNearestNeighbors.Point.get_point_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for getting point value by index
+:param Point self: class instance
+:param int number_of_value: index of value
+:return: exception or float</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="KNearestNeighbors.Point.get_point_values">
+<code class="descname">get_point_values</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#KNearestNeighbors.Point.get_point_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>getter
+:param Point self: class instance
+:return: list_of_values: values list
+:rtype list:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="KNearestNeighbors.main">
+<code class="descclassname">KNearestNeighbors.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#KNearestNeighbors.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main method of application</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/KNearestNeighbors.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Pstrong.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="_sources/KNearestNeighbors.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

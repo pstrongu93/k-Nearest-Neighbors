@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>tests module &mdash; K nearest neighbours 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="K nearest neighbours 1.0 documentation" href="index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-tests">
+<span id="tests-module"></span><h1>tests module<a class="headerlink" href="#module-tests" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="tests.TestKNearestNeighbors">
+<em class="property">class </em><code class="descclassname">tests.</code><code class="descname">TestKNearestNeighbors</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.TestKNearestNeighbors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">unittest.case.TestCase</span></code></p>
+<p>Class for unit testing</p>
+<dl class="method">
+<dt id="tests.TestKNearestNeighbors.testGetPointClass">
+<code class="descname">testGetPointClass</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.TestKNearestNeighbors.testGetPointClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for checking method get_point_class(), which should return point class
+:param TestKNearestNeighbors self:  class instance</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.TestKNearestNeighbors.testGetPointValue">
+<code class="descname">testGetPointValue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.TestKNearestNeighbors.testGetPointValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for checking method get_point_value(), which should return one point value by index
+:param TestKNearestNeighbors self:  class instance</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.TestKNearestNeighbors.testGetPointValueOutOfBound">
+<code class="descname">testGetPointValueOutOfBound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.TestKNearestNeighbors.testGetPointValueOutOfBound" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for checking out of array bound exception for get_point_value() 
+:param TestKNearestNeighbors self:  class instance</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.TestKNearestNeighbors.testGetPointValueSmallerThanZero">
+<code class="descname">testGetPointValueSmallerThanZero</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.TestKNearestNeighbors.testGetPointValueSmallerThanZero" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for checking exception when method argument in smaller than 0
+:param TestKNearestNeighbors self:  class instance</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.TestKNearestNeighbors.testGetPointValues">
+<code class="descname">testGetPointValues</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.TestKNearestNeighbors.testGetPointValues" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for checking method get_point_values(), which should return list of points
+:param TestKNearestNeighbors self:  class instance</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.TestKNearestNeighbors.testGetPrediction">
+<code class="descname">testGetPrediction</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.TestKNearestNeighbors.testGetPrediction" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for checking correctness of choose the class with higest value
+:param TestKNearestNeighbors self:  class instance</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.TestKNearestNeighbors.testKNearestNeighborsCalculateAccuracy">
+<code class="descname">testKNearestNeighborsCalculateAccuracy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.TestKNearestNeighbors.testKNearestNeighborsCalculateAccuracy" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for checking correctness of calculate accuracy method
+:param TestKNearestNeighbors self:  class instance</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.TestKNearestNeighbors.testKNearestNeighborsCalculateEuclideanDistance">
+<code class="descname">testKNearestNeighborsCalculateEuclideanDistance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.TestKNearestNeighbors.testKNearestNeighborsCalculateEuclideanDistance" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for checking correctness of calculate eucliedan distance method
+:param TestKNearestNeighbors self:  class instance</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.TestKNearestNeighbors.testKNearestNeighborsExist">
+<code class="descname">testKNearestNeighborsExist</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.TestKNearestNeighbors.testKNearestNeighborsExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for checking class existence 
+:param TestKNearestNeighbors self: class instance</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.TestKNearestNeighbors.testKNearestNeighborsHasKValue">
+<code class="descname">testKNearestNeighborsHasKValue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.TestKNearestNeighbors.testKNearestNeighborsHasKValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for checking &#8216;k&#8217; class attribute
+:param TestKNearestNeighbors self:  class instance</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.TestKNearestNeighbors.testKNearestNeighborsHasListOfTestPoints">
+<code class="descname">testKNearestNeighborsHasListOfTestPoints</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.TestKNearestNeighbors.testKNearestNeighborsHasListOfTestPoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for checking &#8216;list of test points class&#8217; attribute
+:param TestKNearestNeighbors self:  class instance</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.TestKNearestNeighbors.testKNearestNeighborsHasListOfTrainingPoints">
+<code class="descname">testKNearestNeighborsHasListOfTrainingPoints</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.TestKNearestNeighbors.testKNearestNeighborsHasListOfTrainingPoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for checking &#8216;list of training points&#8217; class attribute
+:param TestKNearestNeighbors self:  class instance</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.TestKNearestNeighbors.testPointExist">
+<code class="descname">testPointExist</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.TestKNearestNeighbors.testPointExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for checking class existence 
+:param TestKNearestNeighbors self: class instance</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.TestKNearestNeighbors.testPointHasListOfValues">
+<code class="descname">testPointHasListOfValues</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.TestKNearestNeighbors.testPointHasListOfValues" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for checking &#8216;list_of_values&#8217; Point class attribute
+:param TestKNearestNeighbors self:  class instance</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.TestKNearestNeighbors.testPointHasPointClass">
+<code class="descname">testPointHasPointClass</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.TestKNearestNeighbors.testPointHasPointClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for checking &#8216;point_class&#8217; Point class attribute
+:param TestKNearestNeighbors self:  class instance</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.TestKNearestNeighbors.testTestData">
+<code class="descname">testTestData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.TestKNearestNeighbors.testTestData" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for checking existence of wile with test data
+:param TestKNearestNeighbors self:  class instance</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.TestKNearestNeighbors.testTraningData">
+<code class="descname">testTraningData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.TestKNearestNeighbors.testTraningData" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for checking existence of wile with traning data
+:param TestKNearestNeighbors self:  class instance</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/tests.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Pstrong.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="_sources/tests.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

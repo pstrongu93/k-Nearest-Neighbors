@@ -75,7 +75,6 @@ class KNearestNeighbors:
         k_nearest_neighbors = []
         for i in range(self.k):
             k_nearest_neighbors.append(training_points_and_distances[i][0])  # extract points with the lowest distance
-        a = k_nearest_neighbors
         return k_nearest_neighbors
 
     @staticmethod

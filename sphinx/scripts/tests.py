@@ -161,6 +161,24 @@ class TestKNearestNeighbors(unittest.TestCase):
             raised = True
         self.assertFalse(raised, 'Exception raised - there is no file in this path')
 
+    def testGetKNearestNeighbors(self):
+        """
+        metrod for checking that get_k_nearest_neighbors returns list
+        :param TestKNearestNeighbors self:  class instance
+
+        """
+        self.KNearestNeighbors = KNearestNeighbors()
+        self.assertIsInstance(self.KNearestNeighbors.get_k_nearest_neighbors(1),list)
+
+    def testGetKNearestNeighborsLenght(self):
+        """
+        metrod for checking that method get_k_nearest_neighbors returns K elements in list
+        :param TestKNearestNeighbors self:  class instance
+
+        """
+        self.KNearestNeighbors = KNearestNeighbors()
+        assert len(self.KNearestNeighbors.get_k_nearest_neighbors(1)) == self.KNearestNeighbors.k, "returned list haven't got K elements"
+
 
 
 
